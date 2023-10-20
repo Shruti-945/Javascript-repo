@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Objects
+    </title>
+  </head>
+  <body>
+    <script>
+       /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+     /*
+      const product2 ={
+        name:'shirt',
+      'delivery-time': '1 day',
+       rating: {
+        stars:4.5,
+        count:87
+       } ,
+       fun: function function1() {
+        console.log('function inside object');
+       }
+      };
+      console.log(product2);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+      console.log(typeof console.log);
+      console.log(JSON.stringify(product2));
+
+      const jsonString= JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      */
+
+      //Auto-boxing
+      console.log('hello'.length);   //here length is a property.
+      console.log('hello'.toUpperCase());
+      //object1 just contains the reference
+      const object1= {
+        message: 'hello'
+      };
+      //Objects are references.
+      //It doesn't make a copy of the object but it just creates a copy of the reference of the entire object.
+      //object2 has same reference as object1 so it points to the same object.
+      const object2=object1;
+      object1.message='Good job';
+        //const prevents us from changing the reference of the object but it doesn't prevents us from changing the value inside the object.
+      //Thus new value assigned is printed.  
+      console.log(object1);
+      console.log(object2);
+      const object3= {
+        message: 'Good job'
+      };
+      //Comparing references here 
+      console.log(object3===object1);
+      console.log(object2===object1);
+      const object4= {
+        message: 'Good job',
+        price:799
+      };
+      //const message=object4.message;
+      //When object and property has same name
+      //Shortcut to take out property from object
+      //Destructuring
+      //This will take price property out of object4 and save it in a variable called price.
+      const {message,price} =object4;
+      console.log(message);
+      console.log(price);
+      //shorthand property
+      const object5= {
+        //message: message
+        message,
+       // method: function function1() {
+         // console.log('method');
+        //}
+
+        //Shorthand method
+        method() {
+          console.log('method');
+        }
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>
